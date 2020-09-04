@@ -6,8 +6,7 @@ const functions = require("firebase-functions");
 // // https://firebase.google.com/docs/functions/typescript
 //
 exports.helloWorld = functions.https.onRequest((request, response) => {
-    response
-        .status(200)
-        .send("helloWorld");
+    functions.logger.info("Hello logs!", { structuredData: true });
+    response.send("Hello from Firebase!");
 });
 //# sourceMappingURL=index.js.map
